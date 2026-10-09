@@ -1,0 +1,49 @@
+{
+  "source_file": "data/Obfuscated-MalMem2022.csv",
+  "cleaned_file": "data/cleansed_data.csv",
+  "raw_sha256_before": "624ecb6c9229cf62bd3b8f65d23a2b132760e6bada458aa46eee134a313840c4",
+  "raw_sha256_after": "624ecb6c9229cf62bd3b8f65d23a2b132760e6bada458aa46eee134a313840c4",
+  "working_sha256_before": "f5e81dc47faa0d5204091582155f9f7692a6f9ddbea7da70b25ae4d1b3a3bfbd",
+  "working_sha256_after": "f5e81dc47faa0d5204091582155f9f7692a6f9ddbea7da70b25ae4d1b3a3bfbd",
+  "before": {
+    "rows": 58596,
+    "columns": 57,
+    "missing_cells": 0,
+    "infinite_numeric_cells": 0,
+    "exact_duplicate_rows": 534,
+    "class_counts": {
+      "Benign": 29298,
+      "Malware": 29298
+    }
+  },
+  "after": {
+    "rows": 58027,
+    "columns": 53,
+    "missing_cells": 0,
+    "infinite_numeric_cells": 0,
+    "exact_duplicate_rows": 0,
+    "class_counts": {
+      "0": 29231,
+      "1": 28796
+    }
+  },
+  "operations": {
+    "trimmed_column_names_and_text": true,
+    "infinite_values_converted_to_missing": true,
+    "missing_values_imputed": 0,
+    "duplicates_removed": 569,
+    "constant_columns_removed": [
+      "pslist.nprocs64bit",
+      "handles.nport",
+      "svcscan.interactive_process_services"
+    ],
+    "leakage_columns_removed": [
+      "Category"
+    ],
+    "label_encoding": {
+      "Benign": 0,
+      "Malware": 1
+    },
+    "scaling_deferred_until_after_train_test_split": true
+  }
+}
