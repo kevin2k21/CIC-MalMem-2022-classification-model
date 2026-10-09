@@ -1,0 +1,26 @@
+rank,feature,importance,method
+1,derived.dlls_per_process_recomputed,0.11285994083734852,impurity-based feature importance
+2,handles.nmutant,0.10485064556411315,impurity-based feature importance
+3,derived.mutants_per_process,0.10263378626016825,impurity-based feature importance
+4,handles.nevent,0.08847711955752532,impurity-based feature importance
+5,derived.process_service_rate,0.08454608501848396,impurity-based feature importance
+6,pslist.avg_threads,0.07705801505794735,impurity-based feature importance
+7,ldrmodules.not_in_load,0.056128777802056606,impurity-based feature importance
+8,derived.driver_service_rate,0.05573731700778971,impurity-based feature importance
+9,handles.nkey,0.047457047885185545,impurity-based feature importance
+10,handles.ntimer,0.04293044076481012,impurity-based feature importance
+11,svcscan.nservices,0.03796787286403771,impurity-based feature importance
+12,derived.sections_per_process,0.037455283686198805,impurity-based feature importance
+13,handles.nsemaphore,0.021334690119370885,impurity-based feature importance
+14,derived.shared_process_service_rate,0.015988142052620502,impurity-based feature importance
+15,svcscan.kernel_drivers,0.01595063267060655,impurity-based feature importance
+16,ldrmodules.not_in_load_avg,0.015358400793353042,impurity-based feature importance
+17,svcscan.nactive,0.015288227266533826,impurity-based feature importance
+18,derived.active_service_rate,0.015120569467886303,impurity-based feature importance
+19,handles.nhandles,0.013954039230212193,impurity-based feature importance
+20,derived.unloaded_module_rate,0.013378943980273318,impurity-based feature importance
+21,handles.avg_handles_per_proc,0.012472385952755094,impurity-based feature importance
+22,malfind.uniqueInjections,0.005371827265711411,impurity-based feature importance
+23,handles.nfile,0.0034766793687406186,impurity-based feature importance
+24,derived.uninitialized_module_rate,0.0027217426961153113,impurity-based feature importance
+25,derived.commit_charge_per_injection,0.001481386830156062,impurity-based feature importance
