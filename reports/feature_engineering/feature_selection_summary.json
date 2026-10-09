@@ -1,0 +1,171 @@
+{
+  "source_file": "data/cleansed_data.csv",
+  "source_sha256": "f5e81dc47faa0d5204091582155f9f7692a6f9ddbea7da70b25ae4d1b3a3bfbd",
+  "random_state": 42,
+  "split_rows": {
+    "train": 37136,
+    "validation": 9285,
+    "test": 11606
+  },
+  "split_class_counts": {
+    "train": {
+      "0": 18707,
+      "1": 18429
+    },
+    "validation": {
+      "0": 4677,
+      "1": 4608
+    },
+    "test": {
+      "0": 5847,
+      "1": 5759
+    }
+  },
+  "original_feature_count": 52,
+  "engineered_feature_count": 25,
+  "candidate_feature_count": 77,
+  "correlation_threshold": 0.95,
+  "correlation_pruned_count": 29,
+  "top_k": 25,
+  "selected_feature_count": 25,
+  "selected_features": [
+    "derived.process_service_rate",
+    "derived.driver_service_rate",
+    "derived.active_service_rate",
+    "svcscan.nservices",
+    "derived.shared_process_service_rate",
+    "svcscan.kernel_drivers",
+    "derived.dlls_per_process_recomputed",
+    "derived.mutants_per_process",
+    "derived.sections_per_process",
+    "handles.avg_handles_per_proc",
+    "handles.nmutant",
+    "handles.nevent",
+    "handles.nhandles",
+    "handles.nkey",
+    "handles.nsemaphore",
+    "handles.ntimer",
+    "pslist.avg_threads",
+    "derived.commit_charge_per_injection",
+    "handles.nfile",
+    "ldrmodules.not_in_load",
+    "derived.unloaded_module_rate",
+    "malfind.uniqueInjections",
+    "ldrmodules.not_in_load_avg",
+    "derived.uninitialized_module_rate",
+    "svcscan.nactive"
+  ],
+  "selected_engineered_features": [
+    "derived.process_service_rate",
+    "derived.driver_service_rate",
+    "derived.active_service_rate",
+    "derived.shared_process_service_rate",
+    "derived.dlls_per_process_recomputed",
+    "derived.mutants_per_process",
+    "derived.sections_per_process",
+    "derived.commit_charge_per_injection",
+    "derived.unloaded_module_rate",
+    "derived.uninitialized_module_rate"
+  ],
+  "feature_definitions": {
+    "derived.handles_per_process": "handles.nhandles / pslist.nproc",
+    "derived.threads_per_process": "handles.nthread / pslist.nproc",
+    "derived.events_per_process": "handles.nevent / pslist.nproc",
+    "derived.mutants_per_process": "handles.nmutant / pslist.nproc",
+    "derived.sections_per_process": "handles.nsection / pslist.nproc",
+    "derived.dlls_per_process_recomputed": "dlllist.ndlls / pslist.nproc",
+    "derived.unloaded_module_rate": "ldrmodules.not_in_load / dlllist.ndlls",
+    "derived.uninitialized_module_rate": "ldrmodules.not_in_init / dlllist.ndlls",
+    "derived.unmapped_module_rate": "ldrmodules.not_in_mem / dlllist.ndlls",
+    "derived.injections_per_process": "malfind.ninjections / pslist.nproc",
+    "derived.unique_injection_rate": "malfind.uniqueInjections / malfind.ninjections",
+    "derived.commit_charge_per_injection": "malfind.commitCharge / malfind.ninjections",
+    "derived.psxview_discrepancies_per_process": "sum of seven psxview discrepancy counts / pslist.nproc",
+    "derived.active_service_rate": "svcscan.nactive / svcscan.nservices",
+    "derived.driver_service_rate": "(svcscan.kernel_drivers + svcscan.fs_drivers) / svcscan.nservices",
+    "derived.process_service_rate": "svcscan.process_services / svcscan.nservices",
+    "derived.shared_process_service_rate": "svcscan.shared_process_services / svcscan.nservices",
+    "derived.anonymous_callback_rate": "callbacks.nanonymous / callbacks.ncallbacks",
+    "derived.generic_callback_rate": "callbacks.ngeneric / callbacks.ncallbacks",
+    "derived.file_handle_rate": "handles.nfile / handles.nhandles",
+    "derived.event_handle_rate": "handles.nevent / handles.nhandles",
+    "derived.thread_handle_rate": "handles.nthread / handles.nhandles",
+    "derived.key_handle_rate": "handles.nkey / handles.nhandles",
+    "derived.mutant_handle_rate": "handles.nmutant / handles.nhandles",
+    "derived.section_handle_rate": "handles.nsection / handles.nhandles"
+  },
+  "benchmark": {
+    "Original 52": {
+      "validation": {
+        "accuracy": 0.9988152934841141,
+        "precision": 0.9986981991755262,
+        "recall": 0.9989149305555556,
+        "f1": 0.9988065531083867,
+        "roc_auc": 0.9999397260975696,
+        "confusion_matrix": [
+          [
+            4671,
+            6
+          ],
+          [
+            5,
+            4603
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9993968636911942,
+        "precision": 0.9996525364836693,
+        "recall": 0.9991317937141865,
+        "f1": 0.9993920972644377,
+        "roc_auc": 0.9999907640788477,
+        "confusion_matrix": [
+          [
+            5845,
+            2
+          ],
+          [
+            5,
+            5754
+          ]
+        ]
+      }
+    },
+    "Selected 25": {
+      "validation": {
+        "accuracy": 0.9987075928917609,
+        "precision": 0.9984815618221258,
+        "recall": 0.9989149305555556,
+        "f1": 0.9986981991755262,
+        "roc_auc": 0.999713756963747,
+        "confusion_matrix": [
+          [
+            4670,
+            7
+          ],
+          [
+            5,
+            4603
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9990522143718766,
+        "precision": 0.9998260869565218,
+        "recall": 0.998263587428373,
+        "f1": 0.9990442262577114,
+        "roc_auc": 0.9999612150706595,
+        "confusion_matrix": [
+          [
+            5846,
+            1
+          ],
+          [
+            10,
+            5749
+          ]
+        ]
+      }
+    }
+  }
+}
