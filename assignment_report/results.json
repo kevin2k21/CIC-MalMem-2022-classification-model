@@ -1,0 +1,103 @@
+{
+  "dataset": "CIC-MalMem-2022",
+  "source_file": "data/Obfuscated-MalMem2022.csv",
+  "before_cleaning": {
+    "rows": 58596,
+    "columns": 57,
+    "missing_values": 0,
+    "duplicate_rows": 534,
+    "class_counts": {
+      "Benign": 29298,
+      "Malware": 29298
+    }
+  },
+  "after_cleaning": {
+    "rows": 58062,
+    "predictor_columns": 52,
+    "missing_values": 0,
+    "duplicates": 0,
+    "constant_columns_removed": [
+      "pslist.nprocs64bit",
+      "handles.nport",
+      "svcscan.interactive_process_services"
+    ]
+  },
+  "split": "80:20 stratified",
+  "random_state": 42,
+  "model": "Decision Tree Classifier",
+  "model_parameters": {
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 8,
+    "max_features": null,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "random_state": 42,
+    "splitter": "best"
+  },
+  "metrics": {
+    "accuracy": 0.9987083440971325,
+    "precision": 0.9991320951223746,
+    "recall": 0.9982656954561221,
+    "f1_score": 0.9986987073826668,
+    "mae": 0.0012916559028674762,
+    "mse": 0.0012916559028674762,
+    "roc_auc": 0.9994336889087739,
+    "confusion_matrix": [
+      [
+        5842,
+        5
+      ],
+      [
+        10,
+        5756
+      ]
+    ],
+    "train_rows": 46449,
+    "test_rows": 11613,
+    "selected_features": [
+      "pslist.avg_threads",
+      "dlllist.ndlls",
+      "dlllist.avg_dlls_per_proc",
+      "handles.nevent",
+      "handles.nthread",
+      "handles.ntimer",
+      "handles.nsection",
+      "handles.nmutant",
+      "ldrmodules.not_in_load",
+      "ldrmodules.not_in_mem"
+    ]
+  },
+  "classification_report": {
+    "Benign": {
+      "precision": 0.9982911825017088,
+      "recall": 0.9991448606122798,
+      "f1-score": 0.9987178391315497,
+      "support": 5847.0
+    },
+    "Malware": {
+      "precision": 0.9991320951223746,
+      "recall": 0.9982656954561221,
+      "f1-score": 0.9986987073826668,
+      "support": 5766.0
+    },
+    "accuracy": 0.9987083440971325,
+    "macro avg": {
+      "precision": 0.9987116388120416,
+      "recall": 0.998705278034201,
+      "f1-score": 0.9987082732571082,
+      "support": 11613.0
+    },
+    "weighted avg": {
+      "precision": 0.9987087061537158,
+      "recall": 0.9987083440971325,
+      "f1-score": 0.9987083399785264,
+      "support": 11613.0
+    }
+  }
+}

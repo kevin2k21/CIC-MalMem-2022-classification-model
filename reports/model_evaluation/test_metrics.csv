@@ -1,0 +1,17 @@
+metric,value,ci_95_lower,ci_95_upper
+accuracy,1.0,1.0,1.0
+balanced_accuracy,1.0,,
+precision,1.0,1.0,1.0
+recall,1.0,1.0,1.0
+specificity,1.0,,
+f1,1.0,1.0,1.0
+f2,1.0,1.0,1.0
+mcc,1.0,,
+roc_auc,1.0,1.0,1.0
+average_precision,1.0,,
+brier_score,2.512079958642082e-05,,
+log_loss,0.00028520577316470366,,
+true_negative,5847.0,,
+false_positive,0.0,,
+false_negative,0.0,,
+true_positive,5759.0,,

@@ -1,0 +1,11 @@
+rank,feature,anova_f_score,p_value
+1,dlllist.avg_dlls_per_proc,221557.97050980822,0.0
+2,handles.nevent,153963.7057097043,0.0
+3,handles.nthread,146374.7951208536,0.0
+4,handles.nmutant,125892.63698714734,0.0
+5,dlllist.ndlls,97798.32242780998,0.0
+6,handles.nsection,87721.81597642253,0.0
+7,pslist.avg_threads,77621.04918381345,0.0
+8,ldrmodules.not_in_load,74764.11383586687,0.0
+9,ldrmodules.not_in_mem,74735.56609955664,0.0
+10,handles.ntimer,73540.93444432892,0.0

@@ -2,3 +2,27 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python tooling and build output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Disposable report previews and Office lock files
+assignment_report/rendered_v*/
+assignment_report/~$*.docx
